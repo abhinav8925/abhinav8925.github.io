@@ -48,16 +48,10 @@
 
   // ─── Nav Scroll Shadow ───
   const nav = document.querySelector('.nav');
-  let lastScroll = 0;
 
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    if (currentScroll > 50) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-    lastScroll = currentScroll;
+    nav.classList.toggle('scrolled', currentScroll > 50);
   }, { passive: true });
 
   // ─── Scroll Reveal ───
@@ -89,7 +83,27 @@
     }, { passive: true });
   }
 
-  // ─── Smooth anchor scroll (fallback for Safari etc.) ───
+  // ─── Rotating Titles (Crossfade) ───
+  const roleEl = document.getElementById('rotatingRole');
+  if (roleEl) {
+    const roles = ['Backend Engineer', 'DevOps Engineer', 'Global CS Mentor'];
+    let index = 0;
+
+    const rotate = () => {
+      index = (index + 1) % roles.length;
+      roleEl.style.opacity = '0';
+      roleEl.style.transform = 'translateY(8px)';
+      setTimeout(() => {
+        roleEl.textContent = roles[index];
+        roleEl.style.opacity = '1';
+        roleEl.style.transform = 'translateY(0)';
+      }, 250);
+    };
+
+    setInterval(rotate, 5000);
+  }
+
+  // ─── Smooth anchor scroll ───
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
       const target = document.querySelector(anchor.getAttribute('href'));

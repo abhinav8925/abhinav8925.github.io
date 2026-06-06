@@ -1,60 +1,80 @@
 # Portfolio Context — Abhinav Anand
 
 ## Session Summary
-- **Date:** June 6, 2026
+- **Date:** June 7, 2026
 - **Goal:** Build professional portfolio site hosted on GitHub Pages
-- **Status:** Initial build complete
+- **Status:** v2 — Enhanced with resume content, design polish, rotating titles
 
 ---
 
 ## Personal Info
 - **Name:** Abhinav Anand
-- **Title:** Backend/DevOps Engineer @TCS, India
+- **Title:** Software Engineer — Backend/DevOps
+- **Location:** Kolkata, India (open to international relocation, visa sponsorship available)
 - **Tagline:** "Building reliable systems that scale & turning complex problems into elegant solutions" (customer-friendly)
 - **About:** Love solving complex problems using technology and human elements
 - **Email:** anandabhinav1903@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/abhinavanandsde/
 - **GitHub:** https://github.com/abhinav8925
 
-## Skills
-- **Full Stack:** MERN (MongoDB, Express, React, Node.js)
-- **Problem Solving:** DSA — 2500+ problems solved
-- **DevOps:** Jenkins, CI/CD, GitHub Actions, Pipelines, Linux, Docker, Kubernetes, Grafana, Terraform, Prometheus
+## Skills (from resume)
+- **Languages:** C++, Java, JavaScript, SQL, Bash
+- **Backend:** Node.js, Express.js, Spring Boot, Servlets, JSP, REST APIs, JWT
+- **Frontend:** React.js, Material UI, HTML5, CSS3
+- **DevOps & Infrastructure:** Docker, Kubernetes, CI/CD (Jenkins), Linux, Serverless, Terraform, Prometheus, Grafana
+- **Databases & Cloud:** MySQL, MongoDB, AWS (EC2, S3), Cloud Native, Containerization, High Availability
+- **Tools:** Git, GitHub, Postman, PuTTY, WinSCP
+- **Testing:** Unit Testing, API Testing, Log Analysis, Test Automation
+- **Architecture:** Agile, Microservices, Production-grade Deployments, Cost Optimization
 
 ## Experience
-### Backend/DevOps Engineer @TCS
+### DevOps Engineer @TCS (Sept 2024 – Present, Kolkata)
 - Automated CI/CD pipelines with Jenkins, Git, Bash — reducing deployment time by 70%
 - Maintained production servers (Linux, Nginx, WinSCP) achieving 99.9% uptime
 - Resolved deployment issues within 15 minutes, improving developer throughput
 - Solved bugs and introduced new features aligning with user stories and requirements
 
+### International CS Mentor @Happy Planet (June 2025 – Present, Remote China)
+- Delivered 300+ hours of CS and Math instruction (avg rating 4.6/5)
+- Created 40+ structured lessons: programming, algorithms, logic-building
+- Improved student performance by 30–40% using personalized learning paths
+
+## Education
+- **B.Tech Computer Science** — Rajasthan Technical University (2020–2024), CGPA: 8.7/10
+
+## Achievements
+- Ranked 122 in Toyota Motor Corporation Global Coding Contest (20,000+ participants)
+- Ranked 130 in Hitachi Hokudai Lab Contest (24,000+ participants)
+- Recognized in Hacktoberfest Hall of Fame
+- Ranked 786 globally in CodeChef Starters (30,000+ participants)
+- Solved 1500+ coding problems across LeetCode, GFG
+
 ## Projects
 ### 1. AI Dependency Risk Analyzer
 - **Live:** https://ai-dependency-risk-analyzer.onrender.com
-- **Desc:** Production-grade software supply chain security analyzer with AI explanations & deterministic fallback. Scans package.json for vulnerabilities, license risks, blocked deps. Combines rule-based analysis + AI (LLaMA 3 via Ollama) with guaranteed fallback.
-- **Tech:** Node.js, Express, Ollama, Docker, GitHub Actions
-- **Key features:** Static risk analysis, AI explanations, deterministic fallback, Dockerized, CI/CD integrated
+- **Desc:** Backend system analyzing package.json dependencies for security risks. BLOCK/WARN/ALLOW decisions with LLM explanations + timeout fallback. Dockerized + CI/CD.
+- **Tech:** Node.js, Express, LLM, Docker, GitHub Actions
 
-### 2. Sentinel — Real-Time Distributed Monitoring System
-- **Desc:** Microservices-based real-time monitoring platform simulating enterprise observability (Datadog, Prometheus). Collects system metrics, processes via Redis queue, generates intelligent alerts, streams via WebSocket.
-- **Tech:** Node.js, Express, Socket.io, MongoDB, Redis (Upstash), systeminformation
-- **Architecture:** Collector → Redis Queue → Worker → MongoDB → Alert Engine → Redis Pub/Sub → WebSocket Dashboard
-- **Key features:** Microservices, event-driven, real-time streaming, distributed processing, batch processing
+### 2. Sentinel Monitor — Real-Time Observability
+- **Desc:** Real-time system monitoring with WebSockets, event-driven alerts, threshold detection, cooldown logic, persistent storage. REST APIs + containerized architecture.
+- **Tech:** Node.js, Socket.io, MongoDB, Redis, Docker
 
-## Design Decisions
+## Design Decisions (v2 Enhancements)
 - **Aesthetic:** Warm & Inviting — approachable, trustworthy, customer/consumer friendly
 - **Theme:** Both light & dark with toggle
-- **Tech:** Vanilla HTML/CSS/JS (GitHub Pages optimal)
-- **Fonts:** Fraunces (headings) + Outfit (body)
+- **Fonts:** Fraunces (headings) + Outfit (body), scaled to 18px base for readability
 - **Accent:** Terracotta (#C3634C) + Warm Gold (#C9A96E)
 - **Background:** Warm cream (#FBF3EA) / Deep warm charcoal (#1B1310)
+- **Added:** Noise texture overlay for visual depth, rotating title crossfade, education + achievements sections, resume-quality skill breakdown
 
 ## Sections
-- [x] Hero/Intro
-- [x] About Me
-- [x] Skills
-- [x] Projects/Work
-- [x] Experience
+- [x] Hero/Intro (rotating titles: Backend Engineer → DevOps Engineer → Global CS Mentor)
+- [x] About Me (updated with photo support)
+- [x] Skills (comprehensive from resume — 6 category cards)
+- [x] Projects/Work (updated descriptions)
+- [x] Experience (TCS + Happy Planet)
+- [x] Education
+- [x] Achievements (4 milestone cards)
 - [ ] Testimonials (placeholder — no content yet)
 - [x] Contact
 - [ ] Blog/Articles (placeholder — no content yet)
@@ -62,10 +82,5 @@
 ## TODO
 - Add actual testimonial content when available
 - Add blog articles when available
-- Replace placeholder profile visual with actual photo
-- Update project links if they change
-
-## Tech Stack for Site
-- Pure HTML5, CSS3, Vanilla JS
-- Google Fonts (Fraunces + Outfit)
-- No build tools — deploy directly to GitHub Pages
+- Add your photo: save as `assets/profile.jpg` (the site will auto-switch from initials to photo)
+- Deploy to GitHub Pages

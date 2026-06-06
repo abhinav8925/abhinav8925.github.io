@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhinav Anand — Backend/DevOps Engineer</title>
+  <title>Abhinav Anand — Software Engineer</title>
   <meta name="description" content="Portfolio of Abhinav Anand — Backend/DevOps Engineer building reliable systems that scale.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,15 +12,18 @@
 </head>
 <body>
 
+  <div class="noise-overlay"></div>
+
   <!-- ─── Navigation ─── -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Abhinav</a>
+      <a href="#hero" class="nav-logo">Abhinav Anand</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Work</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
           <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -41,12 +44,23 @@
     <div class="hero-blob"></div>
     <div class="hero-blob-2"></div>
     <div class="container hero-content">
-      <span class="hero-greeting">Backend / DevOps Engineer</span>
+      <span class="hero-greeting">
+        <span class="hero-greeting-dot"></span>
+        Open to International Relocation
+      </span>
       <h1 class="hero-name">
         Abhinav <span class="highlight">Anand</span>
       </h1>
+      <div class="hero-role-wrapper">
+        <span class="hero-role-label">Software Engineer &mdash; </span>
+        <span class="hero-role-text" id="rotatingRole">Backend Engineer</span>
+      </div>
       <p class="hero-tagline">
         Building reliable systems that scale &amp; turning complex problems into elegant solutions.
+      </p>
+      <p class="hero-location">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Kolkata, India &mdash; <strong>Full Visa Sponsorship Available</strong>
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">See my work</a>
@@ -55,12 +69,15 @@
       <div class="hero-social">
         <a href="https://github.com/abhinav8925" target="_blank" rel="noopener" aria-label="GitHub">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
         </a>
         <a href="https://www.linkedin.com/in/abhinavanandsde/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
         </a>
         <a href="mailto:anandabhinav1903@gmail.com" aria-label="Email">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
         </a>
       </div>
     </div>
@@ -78,18 +95,16 @@
         <div class="about-visual reveal reveal-delay-1">
           <div class="about-avatar-frame">
             <div class="about-avatar-inner">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="35" r="18" fill="currentColor" opacity="0.5"/>
-                <path d="M20 85 Q20 55 50 55 Q80 55 80 85" fill="currentColor" opacity="0.5"/>
-              </svg>
+              <img src="assets/profile.jpg" alt="Abhinav Anand" id="profilePhoto" style="display:none;">
+              <span class="initial-placeholder" id="initialPlaceholder">AA</span>
             </div>
           </div>
         </div>
         <div class="about-text reveal reveal-delay-2">
           <h2 class="section-title">Love solving complex problems using technology and human elements.</h2>
-          <p>I'm Abhinav — a Backend and DevOps Engineer based in India, currently working at TCS. I believe the best systems aren't just technically sound — they're built with people in mind.</p>
+          <p>I'm Abhinav — a Software Engineer based in Kolkata, India, currently working at TCS. I believe the best systems aren't just technically sound — they're built with people in mind.</p>
           <p>Whether it's reducing deployment times by 70%, maintaining 99.9% uptime on production servers, or architecting distributed monitoring systems, I bring the same mindset: break down the complexity, find clarity, and build something that just works.</p>
-          <p>When I'm not shipping code or automating pipelines, I'm solving DSA problems (2500+ and counting), exploring AI infrastructure, or finding better ways to bridge the gap between how systems run and how people use them.</p>
+          <p>When I'm not shipping code or automating pipelines, I'm solving DSA problems (1500+ on LeetCode & GFG), mentoring students globally, or finding better ways to bridge the gap between how systems run and how people use them.</p>
         </div>
       </div>
     </div>
@@ -108,12 +123,13 @@
           <span class="skill-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </span>
-          <h3 class="skill-category">Full Stack</h3>
+          <h3 class="skill-category">Languages</h3>
           <div class="skill-tags">
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">Express</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Bash</span>
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-2">
@@ -123,14 +139,28 @@
           <h3 class="skill-category">Problem Solving</h3>
           <div class="skill-tags">
             <span class="skill-tag">DSA</span>
-            <span class="skill-tag">2500+ Problems</span>
+            <span class="skill-tag">1500+ Problems</span>
             <span class="skill-tag">Algorithms</span>
             <span class="skill-tag">System Design</span>
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-3">
           <span class="skill-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><box x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </span>
+          <h3 class="skill-category">Backend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">JWT</span>
+            <span class="skill-tag">Microservices</span>
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-delay-1">
+          <span class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </span>
           <h3 class="skill-category">DevOps &amp; Cloud</h3>
           <div class="skill-tags">
@@ -138,11 +168,41 @@
             <span class="skill-tag">Kubernetes</span>
             <span class="skill-tag">Jenkins</span>
             <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">GitHub Actions</span>
             <span class="skill-tag">Linux</span>
-            <span class="skill-tag">Nginx</span>
             <span class="skill-tag">Terraform</span>
             <span class="skill-tag">Prometheus</span>
             <span class="skill-tag">Grafana</span>
+            <span class="skill-tag">AWS (EC2, S3)</span>
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-delay-2">
+          <span class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </span>
+          <h3 class="skill-category">Databases &amp; Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Nginx</span>
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-delay-3">
+          <span class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </span>
+          <h3 class="skill-category">Architecture &amp; Testing</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Agile</span>
+            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">High Availability</span>
+            <span class="skill-tag">Unit Testing</span>
+            <span class="skill-tag">API Testing</span>
+            <span class="skill-tag">Log Analysis</span>
+            <span class="skill-tag">Cost Optimization</span>
           </div>
         </div>
       </div>
@@ -162,12 +222,12 @@
           <span class="project-number">Project 01</span>
           <h3 class="project-title">AI Dependency Risk Analyzer</h3>
           <p class="project-desc">
-            A production-grade software supply chain security analyzer that scans <code>package.json</code> for vulnerabilities, license risks, and blocked dependencies. Combines deterministic rule-based analysis with AI-generated explanations (LLaMA 3 via Ollama), featuring a guaranteed fallback system that ensures zero-downtime analysis even when the AI is unavailable.
+            Built a backend system that analyzes <code>package.json</code> dependencies to detect security risks and enforce automated BLOCK / WARN / ALLOW decisions. Implemented LLM-driven security explanations with timeout-based fallback, ensuring reliable responses under production constraints. Containerized with Docker and integrated CI/CD pipelines for automated build, testing, and deployment.
           </p>
           <div class="project-tech">
             <span class="project-tech-tag">Node.js</span>
             <span class="project-tech-tag">Express</span>
-            <span class="project-tech-tag">Ollama</span>
+            <span class="project-tech-tag">LLM</span>
             <span class="project-tech-tag">Docker</span>
             <span class="project-tech-tag">GitHub Actions</span>
           </div>
@@ -179,17 +239,16 @@
 
         <article class="project-card reveal reveal-delay-2">
           <span class="project-number">Project 02</span>
-          <h3 class="project-title">Sentinel — Real-Time Distributed Monitoring</h3>
+          <h3 class="project-title">Sentinel Monitor — Real-Time Observability</h3>
           <p class="project-desc">
-            A microservices-based real-time monitoring platform simulating enterprise observability systems (Datadog, Prometheus). Collects system metrics via a collector service, processes asynchronously through a Redis queue, generates intelligent alerts with cooldown logic, and streams everything to a live dashboard via WebSocket. Demonstrates distributed systems architecture at production scale.
+            Built a real-time system monitoring backend using WebSockets for live CPU and memory metrics streaming. Implemented an event-driven alert engine with threshold detection, cooldown logic, and persistent storage. Designed scalable REST APIs and containerized deployment architecture for production-grade observability.
           </p>
           <div class="project-tech">
             <span class="project-tech-tag">Node.js</span>
-            <span class="project-tech-tag">Express</span>
             <span class="project-tech-tag">Socket.io</span>
             <span class="project-tech-tag">MongoDB</span>
             <span class="project-tech-tag">Redis</span>
-            <span class="project-tech-tag">Microservices</span>
+            <span class="project-tech-tag">Docker</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/abhinav8925" target="_blank" rel="noopener">Source &rarr;</a>
@@ -209,14 +268,74 @@
       <div class="experience-timeline">
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
-          <h3 class="timeline-role">Backend / DevOps Engineer</h3>
-          <p class="timeline-company">Tata Consultancy Services (TCS) &mdash; Present</p>
+          <h3 class="timeline-role">DevOps Engineer</h3>
+          <p class="timeline-company">Tata Consultancy Services (TCS)</p>
+          <p class="timeline-date">Sept 2024 &mdash; Present &middot; Kolkata, India</p>
           <ul class="timeline-desc">
             <li>Automated CI/CD pipelines with Jenkins, Git, Bash &mdash; reducing deployment time by <strong>70%</strong></li>
             <li>Maintained production servers (Linux, Nginx, WinSCP) achieving <strong>99.9% uptime</strong></li>
             <li>Resolved deployment issues within <strong>15 minutes</strong>, improving developer throughput</li>
             <li>Solved bugs and introduced new features aligning with user stories and requirements</li>
           </ul>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <h3 class="timeline-role">International Computer Science Mentor</h3>
+          <p class="timeline-company">Happy Planet</p>
+          <p class="timeline-date">June 2025 &mdash; Present &middot; Remote, China</p>
+          <ul class="timeline-desc">
+            <li>Delivered <strong>300+ hours</strong> of CS and Math instruction (avg rating 4.6/5)</li>
+            <li>Created <strong>40+</strong> structured lessons covering programming, algorithms, and logic-building</li>
+            <li>Improved student performance by <strong>30&ndash;40%</strong> using personalized learning paths</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ─── Education ─── -->
+  <section class="section" id="education">
+    <div class="container">
+      <span class="section-label reveal">Education</span>
+      <h2 class="section-title reveal reveal-delay-1">Where I studied</h2>
+      <div class="education-card reveal reveal-delay-2">
+        <div class="education-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="education-info">
+          <h3>Rajasthan Technical University</h3>
+          <p class="edu-degree">B.Tech in Computer Science &mdash; CGPA: 8.7/10</p>
+          <p class="edu-meta"><span>2020 &mdash; 2024</span> <span>Jaipur, Rajasthan</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ─── Achievements ─── -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <span class="section-label reveal">Achievements</span>
+      <h2 class="section-title reveal reveal-delay-1">Recognition &amp; milestones</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card reveal reveal-delay-1">
+          <span class="achievement-rank">122</span>
+          <p class="achievement-text"><strong>Toyota Motor Corporation</strong> — Ranked 122nd in Global Coding Contest (20,000+ participants)</p>
+        </div>
+        <div class="achievement-card reveal reveal-delay-2">
+          <span class="achievement-rank">130</span>
+          <p class="achievement-text"><strong>Hitachi Hokudai Lab</strong> — Ranked 130th in Contest (24,000+ participants)</p>
+        </div>
+        <div class="achievement-card reveal reveal-delay-3">
+          <span class="achievement-rank">786</span>
+          <p class="achievement-text"><strong>CodeChef Starters</strong> — Ranked 786th globally (30,000+ participants)</p>
+        </div>
+        <div class="achievement-card reveal reveal-delay-1">
+          <span class="achievement-rank">HOF</span>
+          <p class="achievement-text"><strong>Hacktoberfest</strong> — Recognized in the Hall of Fame for open-source contributions</p>
         </div>
       </div>
     </div>
@@ -319,6 +438,14 @@
   <script src="js/main.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Photo swap: user just needs to place assets/profile.jpg
+    const img = document.getElementById('profilePhoto');
+    const placeholder = document.getElementById('initialPlaceholder');
+    img.onload = function() {
+      img.style.display = 'block';
+      placeholder.style.display = 'none';
+    };
 
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
