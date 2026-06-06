@@ -106,21 +106,22 @@
   // ─── Visitor Counter ───
   const COUNTER_NS = 'abhinav-portfolio';
   const COUNTER_KEY_TOTAL = 'visits';
-  const COUNTER_KEY_DAILY = `visits_${new Date().toISOString().split('T')[0]}`;
-  const counterEl = document.getElementById('visitorCount');
+  const todayKey = `visits_${new Date().toISOString().split('T')[0]}`;
+  const totalEl = document.getElementById('visitorCount');
+  const todayEl = document.getElementById('todayCount');
 
   const updateCounter = async () => {
     try {
-      const [totalRes, dailyRes] = await Promise.all([
+      const [totalRes, todayRes] = await Promise.all([
         fetch(`https://api.countapi.xyz/hit/${COUNTER_NS}/${COUNTER_KEY_TOTAL}`),
-        fetch(`https://api.countapi.xyz/hit/${COUNTER_NS}/${COUNTER_KEY_DAILY}`)
+        fetch(`https://api.countapi.xyz/hit/${COUNTER_NS}/${todayKey}`)
       ]);
       const total = await totalRes.json();
-      if (counterEl && total.value) {
-        counterEl.textContent = total.value.toLocaleString();
-      }
+      const today = await todayRes.json();
+      if (totalEl && total.value) totalEl.textContent = total.value.toLocaleString();
+      if (todayEl && today.value) todayEl.textContent = today.value.toLocaleString();
     } catch (e) {
-      // fallback: silently degrade — counter isn't critical
+      // silently degrade — counter isn't critical
     }
   };
   updateCounter();

@@ -1011,7 +1011,8 @@ img {
   opacity: 0.6;
 }
 
-.footer-counter #visitorCount {
+.footer-counter #visitorCount,
+.footer-counter #todayCount {
   font-weight: 500;
   color: var(--notion-text);
 }
