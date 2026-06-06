@@ -59,13 +59,14 @@
 - **Desc:** Real-time system monitoring with WebSockets, event-driven alerts, threshold detection, cooldown logic, persistent storage. REST APIs + containerized architecture.
 - **Tech:** Node.js, Socket.io, MongoDB, Redis, Docker
 
-## Design Decisions (v2 Enhancements)
-- **Aesthetic:** Warm & Inviting — approachable, trustworthy, customer/consumer friendly
+## Design Decisions (v3 — SaaS Modern)
+- **Aesthetic:** Modern SaaS Clean — product-company feel like Stripe/Linear
 - **Theme:** Both light & dark with toggle
 - **Fonts:** Fraunces (headings) + Outfit (body), scaled to 18px base for readability
-- **Accent:** Terracotta (#C3634C) + Warm Gold (#C9A96E)
-- **Background:** Warm cream (#FBF3EA) / Deep warm charcoal (#1B1310)
-- **Added:** Noise texture overlay for visual depth, rotating title crossfade, education + achievements sections, resume-quality skill breakdown
+- **Light:** White bg, indigo (#4F46E5) accent, cyan (#06B6D4) secondary
+- **Dark:** Slate-900 bg, indigo-400 accent, cyan-400 secondary
+- **Added:** SVG placeholder illustrations for projects, refined shadows, focus glows
+- **Removed:** Warm cream palette — replaced with clean white/slate
 
 ## Sections
 - [x] Hero/Intro (rotating titles: Backend Engineer → DevOps Engineer → Global CS Mentor)
