@@ -103,6 +103,28 @@
     setInterval(rotate, 5000);
   }
 
+  // ─── Visitor Counter ───
+  const COUNTER_NS = 'abhinav-portfolio';
+  const COUNTER_KEY_TOTAL = 'visits';
+  const COUNTER_KEY_DAILY = `visits_${new Date().toISOString().split('T')[0]}`;
+  const counterEl = document.getElementById('visitorCount');
+
+  const updateCounter = async () => {
+    try {
+      const [totalRes, dailyRes] = await Promise.all([
+        fetch(`https://api.countapi.xyz/hit/${COUNTER_NS}/${COUNTER_KEY_TOTAL}`),
+        fetch(`https://api.countapi.xyz/hit/${COUNTER_NS}/${COUNTER_KEY_DAILY}`)
+      ]);
+      const total = await totalRes.json();
+      if (counterEl && total.value) {
+        counterEl.textContent = total.value.toLocaleString();
+      }
+    } catch (e) {
+      // fallback: silently degrade — counter isn't critical
+    }
+  };
+  updateCounter();
+
   // ─── Smooth anchor scroll ───
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {

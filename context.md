@@ -14,6 +14,7 @@
 - **Tagline:** "Building reliable systems that scale & turning complex problems into elegant solutions" (customer-friendly)
 - **About:** Love solving complex problems using technology and human elements
 - **Email:** anandabhinav1903@gmail.com
+- **Phone:** +91 89868 25264
 - **LinkedIn:** https://www.linkedin.com/in/abhinavanandsde/
 - **GitHub:** https://github.com/abhinav8925
 
@@ -65,8 +66,8 @@
 - **Fonts:** Fraunces (headings) + Outfit (body), scaled to 18px base for readability
 - **Light:** White bg, Notion blue (#2383E2) accent, subtle gray borders
 - **Dark:** Notion dark (#191919) bg, blue-400 accent
-- **Added:** SVG placeholder illustrations for projects
-- **Removed:** Blob effects, noise overlay, gradients, heavy shadows
+- **Added:** Real profile photo (assets/me.png), project screenshots (assets/Project*.png), favicon, phone number, daily visitor counter
+- **Removed:** Blob effects, noise overlay, gradients, heavy shadows, SVG placeholders
 
 ## Sections
 - [x] Hero/Intro (rotating titles: Backend Engineer → DevOps Engineer → Global CS Mentor)
