@@ -10,7 +10,7 @@
 ## Personal Info
 - **Name:** Abhinav Anand
 - **Title:** Software Engineer — Backend/DevOps
-- **Location:** Kolkata, India (open to international relocation, visa sponsorship available)
+- **Location:** Kolkata, India (open to international relocation, FULL VISA SPONSORSHIP REQUIRED)
 - **Tagline:** "Building reliable systems that scale & turning complex problems into elegant solutions" (customer-friendly)
 - **About:** Love solving complex problems using technology and human elements
 - **Email:** anandabhinav1903@gmail.com
@@ -59,14 +59,14 @@
 - **Desc:** Real-time system monitoring with WebSockets, event-driven alerts, threshold detection, cooldown logic, persistent storage. REST APIs + containerized architecture.
 - **Tech:** Node.js, Socket.io, MongoDB, Redis, Docker
 
-## Design Decisions (v3 — SaaS Modern)
-- **Aesthetic:** Modern SaaS Clean — product-company feel like Stripe/Linear
+## Design Decisions (v3 — Notion-inspired)
+- **Aesthetic:** Notion-like minimal — clean, flat, functional, product-company feel
 - **Theme:** Both light & dark with toggle
 - **Fonts:** Fraunces (headings) + Outfit (body), scaled to 18px base for readability
-- **Light:** White bg, indigo (#4F46E5) accent, cyan (#06B6D4) secondary
-- **Dark:** Slate-900 bg, indigo-400 accent, cyan-400 secondary
-- **Added:** SVG placeholder illustrations for projects, refined shadows, focus glows
-- **Removed:** Warm cream palette — replaced with clean white/slate
+- **Light:** White bg, Notion blue (#2383E2) accent, subtle gray borders
+- **Dark:** Notion dark (#191919) bg, blue-400 accent
+- **Added:** SVG placeholder illustrations for projects
+- **Removed:** Blob effects, noise overlay, gradients, heavy shadows
 
 ## Sections
 - [x] Hero/Intro (rotating titles: Backend Engineer → DevOps Engineer → Global CS Mentor)
