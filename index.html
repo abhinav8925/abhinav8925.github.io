@@ -43,13 +43,12 @@
 
   <!-- ─── Hero ─── -->
   <section class="hero" id="hero">
-    <div class="hero-blob"></div>
-    <div class="hero-blob-2"></div>
     <div class="container hero-content">
       <span class="hero-greeting">
         <span class="hero-greeting-dot"></span>
-        Open to International Relocation
+        Open to International Relocation for Work
       </span>
+      <p class="hero-visa-badge">FULL VISA SPONSORSHIP REQUIRED</p>
       <h1 class="hero-name">
         Abhinav <span class="highlight">Anand</span>
       </h1>
@@ -62,11 +61,11 @@
       </p>
       <p class="hero-location">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Kolkata, India &mdash; <strong>FULL VISA SPONSORSHIP REQUIRED</strong>
+        Kolkata, India
       </p>
-      <p class="hero-location" style="margin-top:-1.25rem;font-size:0.82rem;">
+      <p class="hero-clock">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Your time: <span id="liveClock">--:--:--</span>
+        <span id="liveClock"></span>
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">See my work</a>
@@ -463,6 +462,16 @@
     </div>
   </footer>
 
+  <script>
+    (function(){ 'use strict';
+      var el=document.getElementById('liveClock');
+      if(el){
+        function tick(){ el.textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit',second:'2-digit'}); }
+        tick();
+        setInterval(tick,1000);
+      }
+    })();
+  </script>
   <script src="js/main.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();

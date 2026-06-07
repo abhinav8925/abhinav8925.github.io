@@ -349,10 +349,24 @@ img {
   animation: fadeUp 0.5s ease 0.5s forwards;
 }
 
+.hero-visa-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--notion-text);
+  background: rgba(229, 62, 62, 0.08);
+  border: 1px solid rgba(229, 62, 62, 0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  animation: fadeUp 0.5s ease 0.25s forwards;
+}
+
 .hero-location {
   font-size: 0.88rem;
   color: var(--notion-text-secondary);
-  margin-bottom: 1.75rem;
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -360,13 +374,15 @@ img {
   animation: fadeUp 0.5s ease 0.55s forwards;
 }
 
-.hero-location strong {
-  color: var(--notion-text);
-  font-weight: 500;
-  background: var(--notion-blue-bg);
-  padding: 0.1rem 0.4rem;
-  border-radius: 3px;
-  font-size: 0.8rem;
+.hero-clock {
+  font-size: 0.82rem;
+  color: var(--notion-text-secondary);
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  opacity: 0;
+  animation: fadeUp 0.5s ease 0.58s forwards;
 }
 
 .hero-actions {

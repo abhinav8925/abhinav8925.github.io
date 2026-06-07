@@ -70,19 +70,6 @@
 
   revealElements.forEach((el) => revealObserver.observe(el));
 
-  // ─── Hero Blob Parallax ───
-  const blob = document.querySelector('.hero-blob');
-  const blob2 = document.querySelector('.hero-blob-2');
-
-  if (blob && blob2) {
-    document.addEventListener('mousemove', (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 20;
-      const y = (e.clientY / window.innerHeight - 0.5) * 20;
-      blob.style.transform = `translate(${x * 0.5}px, ${y * 0.5}px)`;
-      blob2.style.transform = `translate(${x * -0.3}px, ${y * -0.3}px)`;
-    }, { passive: true });
-  }
-
   // ─── Rotating Titles (Crossfade) ───
   const roleEl = document.getElementById('rotatingRole');
   if (roleEl) {
@@ -101,17 +88,6 @@
     };
 
     setInterval(rotate, 5000);
-  }
-
-  // ─── Live Clock ───
-  const clockEl = document.getElementById('liveClock');
-  if (clockEl) {
-    function tick() {
-      const now = new Date();
-      clockEl.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-    }
-    tick();
-    setInterval(tick, 1000);
   }
 
   // ─── Visitor Notification Email ───
