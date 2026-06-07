@@ -103,27 +103,35 @@
     setInterval(rotate, 5000);
   }
 
-  // ─── Visitor Counter ───
-  const COUNTER_NS = 'abhinav-portfolio-v2';
+  // ─── Visitor Counter (unique-visitor only) ───
+  const COUNTER_NS = 'abhinav-portfolio-v3';
   const totalEl = document.getElementById('visitorCount');
   const todayEl = document.getElementById('todayCount');
 
   const updateCounter = async () => {
+    const today = new Date().toISOString().split('T')[0];
+    const countedKey = `portfolio_counted_${today}`;
+    const isNewVisitor = !localStorage.getItem(countedKey);
+
     try {
-      const today = new Date().toISOString().split('T')[0];
+      // Increment only on first visit (per day per browser)
+      const endpoint = isNewVisitor ? 'hit' : 'get';
       const [totalRes, todayRes] = await Promise.all([
-        fetch(`https://api.countapi.xyz/hit/${COUNTER_NS}/total`),
-        fetch(`https://api.countapi.xyz/hit/${COUNTER_NS}/${today}`)
+        fetch(`https://api.countapi.xyz/${endpoint}/${COUNTER_NS}/total`),
+        fetch(`https://api.countapi.xyz/${endpoint}/${COUNTER_NS}/${today}`)
       ]);
       const totalData = await totalRes.json();
       const todayData = await todayRes.json();
       if (totalEl && totalData.value) totalEl.textContent = totalData.value.toLocaleString();
       if (todayEl && todayData.value) todayEl.textContent = todayData.value.toLocaleString();
+      if (isNewVisitor) localStorage.setItem(countedKey, '1');
     } catch (e) {
-      // fallback to localStorage if API fails
-      let count = parseInt(localStorage.getItem('portfolio_visits') || '0') + 1;
-      localStorage.setItem('portfolio_visits', count);
-      if (totalEl) totalEl.textContent = count.toLocaleString();
+      // fallback to localStorage
+      const countedEver = localStorage.getItem('portfolio_visits');
+      if (!countedEver) {
+        localStorage.setItem('portfolio_visits', '1');
+      }
+      if (totalEl) totalEl.textContent = localStorage.getItem('portfolio_visits');
     }
   };
   updateCounter();

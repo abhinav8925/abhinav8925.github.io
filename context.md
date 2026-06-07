@@ -83,6 +83,12 @@
 
 ## TODO
 - Add actual testimonial content when available
-- Add blog articles when available
-- Add your photo: save as `assets/profile.jpg` (the site will auto-switch from initials to photo)
+- Add blog posts by editing `index.html` blog section
 - Deploy to GitHub Pages
+
+## How to Set Up Contact Form (Formspree)
+1. Go to https://formspree.io and sign up (free — 50 submissions/month)
+2. Create a new form, copy your form ID (e.g., `xblgqkzj`)
+3. Open `index.html`, find `action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID"`
+4. Replace `REPLACE_WITH_YOUR_FORM_ID` with your actual form ID
+5. Commit and push — the form will now send emails to your registered address

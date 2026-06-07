@@ -13,9 +13,9 @@
   --notion-nav-bg: rgba(255, 255, 255, 0.92);
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.03);
   --shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --dot-color: rgba(55, 53, 47, 0.08);
-  --orb-color-1: rgba(35, 131, 226, 0.03);
-  --orb-color-2: rgba(35, 131, 226, 0.02);
+  --dot-color: rgba(55, 53, 47, 0.15);
+  --orb-color-1: rgba(35, 131, 226, 0.04);
+  --orb-color-2: rgba(35, 131, 226, 0.025);
 }
 
 [data-theme="dark"] {
@@ -32,9 +32,9 @@
   --notion-nav-bg: rgba(25, 25, 25, 0.92);
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.15);
-  --dot-color: rgba(255, 255, 255, 0.06);
-  --orb-color-1: rgba(87, 155, 234, 0.04);
-  --orb-color-2: rgba(87, 155, 234, 0.02);
+  --dot-color: rgba(255, 255, 255, 0.1);
+  --orb-color-1: rgba(87, 155, 234, 0.06);
+  --orb-color-2: rgba(87, 155, 234, 0.03);
 }
 
 *, *::before, *::after {
@@ -51,8 +51,8 @@ html {
 body {
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   background-image:
-    radial-gradient(circle, var(--dot-color) 0.8px, transparent 0.8px);
-  background-size: 24px 24px;
+    radial-gradient(circle, var(--dot-color) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
   background-color: var(--notion-bg);
   color: var(--notion-text);
   line-height: 1.65;
