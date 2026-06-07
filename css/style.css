@@ -13,6 +13,9 @@
   --notion-nav-bg: rgba(255, 255, 255, 0.92);
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.03);
   --shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --dot-color: rgba(55, 53, 47, 0.08);
+  --orb-color-1: rgba(35, 131, 226, 0.03);
+  --orb-color-2: rgba(35, 131, 226, 0.02);
 }
 
 [data-theme="dark"] {
@@ -29,6 +32,9 @@
   --notion-nav-bg: rgba(25, 25, 25, 0.92);
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --dot-color: rgba(255, 255, 255, 0.06);
+  --orb-color-1: rgba(87, 155, 234, 0.04);
+  --orb-color-2: rgba(87, 155, 234, 0.02);
 }
 
 *, *::before, *::after {
@@ -45,8 +51,8 @@ html {
 body {
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   background-image:
-    radial-gradient(circle, var(--notion-border) 0.5px, transparent 0.5px);
-  background-size: 20px 20px;
+    radial-gradient(circle, var(--dot-color) 0.8px, transparent 0.8px);
+  background-size: 24px 24px;
   background-color: var(--notion-bg);
   color: var(--notion-text);
   line-height: 1.65;
@@ -118,6 +124,42 @@ img {
   color: var(--notion-text-secondary);
   max-width: 560px;
   line-height: 1.65;
+}
+
+/* ─── Animated Background Orb ─── */
+.bg-orb {
+  position: fixed;
+  top: -20%;
+  left: -10%;
+  width: 80vmax;
+  height: 80vmax;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 40%, var(--orb-color-1) 0%, var(--orb-color-2) 40%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: -1;
+  animation: bgOrbFloat 25s ease-in-out infinite;
+}
+
+.bg-orb-2 {
+  position: fixed;
+  bottom: -20%;
+  right: -10%;
+  width: 60vmax;
+  height: 60vmax;
+  border-radius: 50%;
+  background: radial-gradient(circle at 70% 60%, var(--orb-color-2) 0%, var(--orb-color-1) 50%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: -1;
+  animation: bgOrbFloat 30s ease-in-out infinite reverse;
+}
+
+@keyframes bgOrbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(4%, -4%) scale(1.03); }
+  50% { transform: translate(-2%, 3%) scale(0.97); }
+  75% { transform: translate(3%, 2%) scale(1.01); }
 }
 
 /* ─── Navigation ─── */
