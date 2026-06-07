@@ -1076,6 +1076,26 @@ img {
   background: var(--notion-blue-hover);
 }
 
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin-top: 0.75rem;
+  font-size: 0.82rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.form-status-success {
+  color: #0F973D;
+}
+
+.form-status-error {
+  color: #E53E3E;
+}
+
 /* ─── Footer ─── */
 .footer {
   padding: 2.5rem 0;

@@ -408,12 +408,8 @@
             </a>
           </div>
         </div>
-        <form class="contact-form reveal reveal-delay-2" id="contactForm" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+        <form class="contact-form reveal reveal-delay-2" id="contactForm" action="https://formspree.io/f/mqeopgoo" method="POST">
           <h3>Send a message</h3>
-          <p style="font-size:0.8rem;color:var(--notion-text-secondary);margin-bottom:1rem;line-height:1.5;">
-            This form needs a free <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> account to work.<br>
-            Until then, <a href="mailto:anandabhinav1903@gmail.com">email me directly</a>.
-          </p>
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -426,7 +422,8 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
           </div>
-          <button type="submit" class="form-submit">Send message</button>
+          <button type="submit" class="form-submit" id="formSubmitBtn">Send message</button>
+          <p class="form-status" id="formStatus"></p>
         </form>
       </div>
     </div>
@@ -473,11 +470,39 @@
       placeholder.style.display = 'none';
     };
 
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      if (this.action.includes('REPLACE_WITH')) {
-        e.preventDefault();
-        alert('Please set up Formspree first (see the note above the form). Until then, email me directly at anandabhinav1903@gmail.com');
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('formSubmitBtn');
+      const status = document.getElementById('formStatus');
+      const form = e.target;
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      status.textContent = '';
+      status.className = 'form-status';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          status.textContent = 'Message sent! I\'ll get back to you soon.';
+          status.className = 'form-status form-status-success';
+          form.reset();
+        } else {
+          const data = await res.json();
+          status.textContent = data?.error || 'Something went wrong. Please email me directly.';
+          status.className = 'form-status form-status-error';
+        }
+      } catch {
+        status.textContent = 'Network error. Please email me at anandabhinav1903@gmail.com';
+        status.className = 'form-status form-status-error';
       }
+
+      btn.disabled = false;
+      btn.textContent = 'Send message';
     });
   </script>
 </body>
