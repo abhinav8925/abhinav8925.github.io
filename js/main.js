@@ -104,24 +104,26 @@
   }
 
   // ─── Visitor Counter ───
-  const COUNTER_NS = 'abhinav-portfolio';
-  const COUNTER_KEY_TOTAL = 'visits';
-  const todayKey = `visits_${new Date().toISOString().split('T')[0]}`;
+  const COUNTER_NS = 'abhinav-portfolio-v2';
   const totalEl = document.getElementById('visitorCount');
   const todayEl = document.getElementById('todayCount');
 
   const updateCounter = async () => {
     try {
+      const today = new Date().toISOString().split('T')[0];
       const [totalRes, todayRes] = await Promise.all([
-        fetch(`https://api.countapi.xyz/hit/${COUNTER_NS}/${COUNTER_KEY_TOTAL}`),
-        fetch(`https://api.countapi.xyz/hit/${COUNTER_NS}/${todayKey}`)
+        fetch(`https://api.countapi.xyz/hit/${COUNTER_NS}/total`),
+        fetch(`https://api.countapi.xyz/hit/${COUNTER_NS}/${today}`)
       ]);
-      const total = await totalRes.json();
-      const today = await todayRes.json();
-      if (totalEl && total.value) totalEl.textContent = total.value.toLocaleString();
-      if (todayEl && today.value) todayEl.textContent = today.value.toLocaleString();
+      const totalData = await totalRes.json();
+      const todayData = await todayRes.json();
+      if (totalEl && totalData.value) totalEl.textContent = totalData.value.toLocaleString();
+      if (todayEl && todayData.value) todayEl.textContent = todayData.value.toLocaleString();
     } catch (e) {
-      // silently degrade — counter isn't critical
+      // fallback to localStorage if API fails
+      let count = parseInt(localStorage.getItem('portfolio_visits') || '0') + 1;
+      localStorage.setItem('portfolio_visits', count);
+      if (totalEl) totalEl.textContent = count.toLocaleString();
     }
   };
   updateCounter();

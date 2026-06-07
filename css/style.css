@@ -44,11 +44,14 @@ html {
 
 body {
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--notion-bg);
+  background-image:
+    radial-gradient(circle, var(--notion-border) 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  background-color: var(--notion-bg);
   color: var(--notion-text);
   line-height: 1.65;
   overflow-x: hidden;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -832,9 +835,54 @@ img {
   font-weight: 500;
 }
 
-/* ─── Testimonials / Blog ─── */
-.testimonials-placeholder,
-.blog-placeholder {
+/* ─── Blog ─── */
+.blog-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.blog-post {
+  border-bottom: 1px solid var(--notion-border);
+  padding-bottom: 1.25rem;
+}
+
+.blog-post:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.blog-date {
+  font-size: 0.75rem;
+  color: var(--notion-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.blog-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-variation-settings: 'SOFT' 100;
+  margin: 0.25rem 0 0.35rem;
+}
+
+.blog-title a {
+  color: var(--notion-text);
+}
+
+.blog-title a:hover {
+  color: var(--notion-blue);
+}
+
+.blog-excerpt {
+  font-size: 0.85rem;
+  color: var(--notion-text-secondary);
+  line-height: 1.55;
+}
+
+/* ─── Testimonials ─── */
+.testimonials-placeholder {
   background: var(--notion-bg-secondary);
   border: 1px dashed var(--notion-border);
   border-radius: 4px;
@@ -843,14 +891,12 @@ img {
   margin-top: 2rem;
 }
 
-.testimonials-placeholder p,
-.blog-placeholder p {
+.testimonials-placeholder p {
   color: var(--notion-text-secondary);
   font-size: 0.88rem;
 }
 
-.testimonials-placeholder .placeholder-icon,
-.blog-placeholder .placeholder-icon {
+.testimonials-placeholder .placeholder-icon {
   font-size: 2rem;
   margin-bottom: 0.75rem;
   display: block;
