@@ -103,6 +103,43 @@
     setInterval(rotate, 5000);
   }
 
+  // ─── Live Clock ───
+  const clockEl = document.getElementById('liveClock');
+  if (clockEl) {
+    function tick() {
+      const now = new Date();
+      clockEl.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    }
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  // ─── Visitor Notification Email ───
+  const notifiedKey = `portfolio_notified_${new Date().toISOString().split('T')[0]}`;
+  if (!localStorage.getItem(notifiedKey)) {
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const info = [
+        `New visitor on your portfolio!`,
+        `Time: ${new Date().toLocaleString()}`,
+        `Timezone: ${tz}`,
+        `Browser: ${navigator.userAgent.substring(0, 120)}`,
+        `Language: ${navigator.language}`,
+        `Platform: ${navigator.platform}`
+      ].join('\n');
+      fetch('https://formspree.io/f/mqeopgoo', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: 'Portfolio Visitor',
+          email: 'visitor@portfolio',
+          message: info
+        }),
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+      });
+      localStorage.setItem(notifiedKey, '1');
+    } catch (_) {}
+  }
+
   // ─── Visitor Counter (unique-visitor only) ───
   const COUNTER_NS = 'abhinav-portfolio-v3';
   const totalEl = document.getElementById('visitorCount');
@@ -114,7 +151,6 @@
     const isNewVisitor = !localStorage.getItem(countedKey);
 
     try {
-      // Increment only on first visit (per day per browser)
       const endpoint = isNewVisitor ? 'hit' : 'get';
       const [totalRes, todayRes] = await Promise.all([
         fetch(`https://api.countapi.xyz/${endpoint}/${COUNTER_NS}/total`),
@@ -125,12 +161,9 @@
       if (totalEl && totalData.value) totalEl.textContent = totalData.value.toLocaleString();
       if (todayEl && todayData.value) todayEl.textContent = todayData.value.toLocaleString();
       if (isNewVisitor) localStorage.setItem(countedKey, '1');
-    } catch (e) {
-      // fallback to localStorage
+    } catch (_) {
       const countedEver = localStorage.getItem('portfolio_visits');
-      if (!countedEver) {
-        localStorage.setItem('portfolio_visits', '1');
-      }
+      if (!countedEver) localStorage.setItem('portfolio_visits', '1');
       if (totalEl) totalEl.textContent = localStorage.getItem('portfolio_visits');
     }
   };

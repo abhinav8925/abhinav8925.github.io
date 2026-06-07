@@ -92,3 +92,8 @@
 3. Open `index.html`, find `action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID"`
 4. Replace `REPLACE_WITH_YOUR_FORM_ID` with your actual form ID
 5. Commit and push — the form will now send emails to your registered address
+
+## Features
+- **Live Clock** — Shows the visitor's local time (auto-detects timezone from their browser)
+- **Visit Notifications** — Every unique daily visitor sends you an email via Formspree with their timezone, browser, and language info
+- **Contact Form** — AJAX submission to Formspree with inline success/error messages
